@@ -22,6 +22,8 @@
             var x;
             var lasHoras = "HH";
             var losMinutos = "MM";
+            
+            document.queyselector(#HH),inerHTML = lasHoras
 
             function preload() {
                 datos = loadJSON("https://digimon-api.vercel.app/api/digimon");
@@ -38,16 +40,6 @@
                 createA("page.html?data=" + "NombreDelDigimon", "siguiente página").parent("next");
                 createA("page.html?data=" + "NombreDelDigimon", "Acepto, dibujaré a " + "NombreDelDigimon" + " 🖍️").parent("accept");
                 noCanvas();
-                
-                var descargar = select("#descargar");
-                descarga.mousePressed(artemania);
-  
-                var descarga = select("#borra");
-                descarga.mousePressed(borrador);
-                createCanvas(windowWidth, windowHeight).position(0, 0).style("z-index", -1);
-                background("#efebe9");
-                elColor = createColorPicker("#000000").parent("controles");
-                elSlider = createSlider(1, 5, 3).parent("controles");
             }
         </script>
     </body>
