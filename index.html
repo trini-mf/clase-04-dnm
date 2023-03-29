@@ -22,11 +22,10 @@
             var x;
             var lasHoras = "HH";
             var losMinutos = "MM";
-            var lasHoras = new Date().getHours();
+            var laHora = new Date().getHours();
 
-            document.querySelector("#hora").innerHTML = lasHoras;
+            document.querySelector("#hora").innerHTML = laHora;
             
-            document.querySelector("minutos").innerHTML = losMinutos;
 
             function preload() {
                 datos = loadJSON("https://digimon-api.vercel.app/api/digimon");
