@@ -25,9 +25,9 @@
                 var title = select("header");
                 createElement("h1", "Aceptaste dibujar a " + palabra_pasada).parent(title);
                 var descarga = select("#descargar");
-                descarga.mousePressed(descargar);
+                descarga.mousePressed(EstaNoEs);
                 var borra = select("#borrar");
-                borra.mousePressed(borrar);
+                borra.mousePressed(EstaNoEs);
                 elColor = createColorPicker("#000000").parent("controles");
                 elSlider = createSlider(1, 5, 3).parent("controles");
                 createCanvas(windowWidth, windowHeight).position(0, 0).style("z-index", -1);
@@ -38,8 +38,7 @@
                 stroke(elColor.color());
                 strokeWeight(elSlider.value());
                 if (mouseIsPressed) {
-                    //aquí falta algo
-                }
+                line(pmouseX, pmouseY, mouseX, mouseY);}
             }
 
             function descargador() {
