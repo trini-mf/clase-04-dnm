@@ -26,7 +26,9 @@
 
             document.querySelector("#hora").innerHTML = laHora;
             
-            document.querySelector("#minuto").innerHTML = losMinutos;
+            var losMinutos = new Date().getHours();
+            
+            document.querySelector("#minutos").innerHTML = losMinutos
             
 
             function preload() {
