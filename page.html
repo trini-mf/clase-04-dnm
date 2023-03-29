@@ -25,11 +25,11 @@
                 var title = select("header");
                 createElement("h1", "Aceptaste dibujar a " + palabra_pasada).parent(title);
                 var descarga = select("#descargar");
-                descarga.mousePressed(EstaNoEs);
-                var borra = select("#borrar");
-                borra.mousePressed(EstaNoEs);
-                elColor = createColorPicker("#000000").parent("controles");
-                elSlider = createSlider(1, 5, 3).parent("controles");
+                descarga.mousePressed(descargador);
+                var borra = select("#borrador");
+                borra.mousePressed(borrador);
+                elColor = createColorPicker("#000000").parent("elColor");
+                elSlider = createSlider(1, 5, 3).parent("strokeWeight");
                 createCanvas(windowWidth, windowHeight).position(0, 0).style("z-index", -1);
                 background("#ddd");
             }
@@ -42,11 +42,11 @@
             }
 
             function descargador() {
-                saveCanvas(palabra_pasada, "jpg");
+                saveCanvas("MiDigimon", "jpg");
             }
 
             function borrador() {
-                //aquí también falta algo
+                background("#eceff1")
             }
 
             function EstaNoEs(){
